@@ -18,14 +18,14 @@
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation From="0" To="300" Storyboard.TargetName="bgRect" Storyboard.TargetProperty="Width" Duration="0:0:0.3" />
+                                        <DoubleAnimation From="0" To="400" Storyboard.TargetName="bgRect" Storyboard.TargetProperty="Width" Duration="0:0:0.1" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation From="300" To="0" Storyboard.TargetName="bgRect" Storyboard.TargetProperty="Width" Duration="0:0:0.2" />
+                                        <DoubleAnimation From="400" To="0" Storyboard.TargetName="bgRect" Storyboard.TargetProperty="Width" Duration="0:0:0.1" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
