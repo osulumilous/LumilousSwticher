@@ -2,7 +2,7 @@
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
-namespace AinuSwitcher
+namespace VarkariaSwitcher
 {
     class CertificateManager
     {
@@ -16,7 +16,7 @@ namespace AinuSwitcher
             var store = new X509Store(StoreName.Root, StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadWrite);
 
-            var certificate = new X509Certificate2(AinuSwitcher.Properties.Resources.cert);
+            var certificate = new X509Certificate2(VarkariaSwitcher.Properties.Resources.cert);
             store.Add(certificate);
 
             store.Close();

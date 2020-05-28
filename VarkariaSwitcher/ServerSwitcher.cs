@@ -1,20 +1,20 @@
 ﻿using System.Linq;
-using AinuSwitcher.Extensions;
-using AinuSwitcher.Helpers;
+using VarkariaSwitcher.Extensions;
+using VarkariaSwitcher.Helpers;
 using System.Threading.Tasks;
 
-namespace AinuSwitcher
+namespace VarkariaSwitcher
 {
     class ServerSwitcher
     {
         private readonly string serverAddress;
 
-        public ServerSwitcher(string AinuIpAddress)
+        public ServerSwitcher(string VarkariaIpAddress)
         {
-            this.serverAddress = AinuIpAddress;
+            this.serverAddress = VarkariaIpAddress;
         }
 
-        public void SwitchToAinu()
+        public void SwitchToVarkaria()
         {
             var lines = HostsFile.ReadAllLines();
             var result = lines.Where(x => !x.Contains("ppy.sh")).ToList();
@@ -47,14 +47,14 @@ namespace AinuSwitcher
 
         public Server GetCurrentServer()
         {
-            bool isAinu = HostsFile.ReadAllLines().Any(x => x.Contains("osu.ppy.sh") && !x.Contains("#"));
-            return isAinu ? Server.Ainu : Server.Official;
+            bool isVarkaria = HostsFile.ReadAllLines().Any(x => x.Contains("osu.ppy.sh") && !x.Contains("#"));
+            return isVarkaria ? Server.Varkaria : Server.Official;
         }
     }
 
     public enum Server
     {
         Official,
-        Ainu
+        Varkaria
     }
 }

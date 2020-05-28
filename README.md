@@ -1,2 +1,2 @@
-# Ainu Switcher
-This is the source of Ainu switcher!
+# Varkaria Switcher
+This is the source of Varkaria switcher!

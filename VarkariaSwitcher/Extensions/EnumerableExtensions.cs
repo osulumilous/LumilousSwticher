@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AinuSwitcher.Extensions
+namespace VarkariaSwitcher.Extensions
 {
     static class EnumerableExtensions
     {

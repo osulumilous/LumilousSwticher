@@ -7,13 +7,13 @@ using System.Windows;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Ainu! Switcher")]
-[assembly: AssemblyDescription("Ainu! the best osu! server")]
+[assembly: AssemblyTitle("Varkaria! Switcher")]
+[assembly: AssemblyDescription("Varkaria! the best osu! server")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Ainu! Switcher")]
+[assembly: AssemblyProduct("Varkaria! Switcher")]
 [assembly: AssemblyCopyright("Copyright © Aoba Suzukaze 2019")]
-[assembly: AssemblyTrademark("Ainu(TM)")]
+[assembly: AssemblyTrademark("Varkaria(TM)")]
 [assembly: AssemblyCulture("")]
 
 // Параметр ComVisible со значением FALSE делает типы в сборке невидимыми 

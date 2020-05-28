@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace AinuSwitcher
+namespace VarkariaSwitcher
 {
     public partial class MainWindow : Window
     {
@@ -30,12 +30,12 @@ namespace AinuSwitcher
             await CheckCertificate();
 
             // load server ip
-            var serverIp = await GeneralHelper.GetAinuAddressAsync();
+            var serverIp = await GeneralHelper.GetVarkariaAddressAsync();
             if (serverIp == string.Empty)
             {
-                MessageBox.Show("An error occurred while retrieving Ainu's IP. Maybe check your Internet connection?" + Environment.NewLine +
+                MessageBox.Show("An error occurred while retrieving Varkaria's IP. Maybe check your Internet connection?" + Environment.NewLine +
                     "Stored IP address will be used");
-                serverIp = Constants.AinuHardcodedIp;
+                serverIp = Constants.VarkariaHardcodedIp;
             }
             serverSwitcher = new ServerSwitcher(serverIp);
 
@@ -55,10 +55,10 @@ namespace AinuSwitcher
         {
             switchButton.IsEnabled = false;
             var currentServer = await serverSwitcher.GetCurrentServerAsync();
-            statusLabel.Content = (currentServer == Server.Ainu)
-                ? Constants.UiYouArePlayingOnAinu : Constants.UiYouArePlayingOnOfficial;
+            statusLabel.Content = (currentServer == Server.Varkaria)
+                ? Constants.UiYouArePlayingOnVarkaria : Constants.UiYouArePlayingOnOfficial;
             switchButton.Content = (currentServer == Server.Official)
-                ? Constants.UiSwitchToAinu : Constants.UiSwitchToOfficial;
+                ? Constants.UiSwitchToVarkaria : Constants.UiSwitchToOfficial;
             switchButton.IsEnabled = true;
         }
 
@@ -75,7 +75,7 @@ namespace AinuSwitcher
             {
                 if (serv == Server.Official)
                 {
-                    serverSwitcher.SwitchToAinu();
+                    serverSwitcher.SwitchToVarkaria();
                 }
                 else
                 {
@@ -84,7 +84,7 @@ namespace AinuSwitcher
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while connecting to Ainu. If you still can't connect and have tried disabling your antivirus, please ask for help either in our discord!"
+                MessageBox.Show("An error occurred while connecting to Varkaria. If you still can't connect and have tried disabling your antivirus, please ask for help either in our discord!"
                 + string.Format("\r\n\r\nDetails:\r\n{0}", ex.Message));
                 Logger.Log(ex);
             }
@@ -125,7 +125,7 @@ namespace AinuSwitcher
 
         private void websiteText_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://ainu.pw");
+            System.Diagnostics.Process.Start("https://Varkaria.pw");
         }
 
         private void titleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
